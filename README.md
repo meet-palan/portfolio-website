@@ -1,4 +1,4 @@
-# Meet Palan - Business Analyst Portfolio
+# Meet Palan -Portfolio
 
 A modern, responsive portfolio website built with Next.js, Tailwind CSS, and Framer Motion, showcasing Meet Palan's expertise as an Aspiring Business Analyst.
 
