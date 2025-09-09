@@ -70,7 +70,7 @@ export default function Skills() {
                   <div className="max-h-[15rem] overflow-y-auto overflow-x-hidden pr-2">
                     {category.skills.map((skill, index) => (
                       <motion.div
-                        key={skill}
+                        key={`${skill}-${index}`}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}

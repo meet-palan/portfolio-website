@@ -1,6 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
-import { GraduationCap, Calendar, MapPin, Award, BookOpen, Star } from 'lucide-react'
+import { GraduationCap, Calendar, MapPin, Award, BookOpen, Star, Link as LinkIcon } from 'lucide-react'
 import { profileData } from '../data/profile'
 
 export default function Education() {
@@ -114,7 +114,6 @@ export default function Education() {
             <Award className="text-accent" size={32} />
             <span>Certifications</span>
           </motion.h3>
-
           <div className="grid md:grid-cols-3 gap-6">
             {certifications.slice(0, 3).map((cert, index) => (
               <motion.div
@@ -124,8 +123,19 @@ export default function Education() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="glass-effect p-6 rounded-xl text-center card-hover"
+                className="glass-effect p-6 rounded-xl text-center card-hover relative"
               >
+                {cert.url && (
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-3 right-3 w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center hover:bg-primary"
+                    aria-label="Open certificate website"
+                  >
+                    <LinkIcon size={16} />
+                  </a>
+                )}
                 <motion.div
                   whileHover={{ rotate: 5 }}
                   className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4"
@@ -165,9 +175,6 @@ export default function Education() {
             </a>
           </div>
         </div>
-
-        {/* Workshops & Achievements */}
-        
       </div>
     </section>
   )

@@ -3,7 +3,9 @@ export const profileData = {
     name: "Meet Palan",
     title: "Aspiring Business Analyst & Product Manager",
     tagline: "Bridging business needs with innovative solutions",
-    profileImage: "/profile-placeholder.jpg", // Replace with your actual image path
+    profileImage: "/Pic.jpg",
+    resumeUrl: "https://drive.google.com/file/d/1GsOGTX7D8s3g_lEmOpBcuODJ50f2d_BW/view?usp=sharing",
+     //profileImage: "/profile-placeholder.jpg"
     linkedin: "https://www.linkedin.com/in/meetpalan2003/",
     github: "https://github.com/meet-palan",
     instagram: "https://www.instagram.com/meet_palann/",
@@ -181,7 +183,9 @@ export const profileData = {
       date: "Jun 2024",
       status: "completed",
       description: "Gained expertise in business analysis, requirements gathering, and project management",
-      skills: ["Business Analysis", "Requirements Gathering", "Project Management"]
+      skills: ["Business Analysis", "Requirements Gathering", "Project Management"],
+      image: "/1.jpg",
+      url: "https://www.linkedin.com/learning/"
     },
     {
       id: 2,
@@ -190,7 +194,9 @@ export const profileData = {
       date: "Oct 2022", 
       status: "completed",
       description: "Developed a strong SQL skills for database management and data-driven decision-making",
-      skills: ["SQL", "Database Management", "Data Analysis"]
+      skills: ["SQL", "Database Management", "Data Analysis"],
+      image: "/Pic.jpg",
+      url: "https://academy.oracle.com/"
     },
     {
       id: 3,
@@ -199,10 +205,11 @@ export const profileData = {
       date: "May 2022",
       status: "completed", 
       description: "Acquired foundational knowledge in digital marketing and online business growth strategies",
-      skills: ["Digital Marketing", "SEO", "Analytics", "Online Strategy"]
+      skills: ["Digital Marketing", "SEO", "Analytics", "Online Strategy"],
+      image: "/1.jpg",
+      url: "https://learndigital.withgoogle.com/digitalgarage"
     }
   ],
-
   
   interests: [
     "Sports",

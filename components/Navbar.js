@@ -29,11 +29,11 @@ export default function Navbar() {
   }
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ]
@@ -48,12 +48,13 @@ export default function Navbar() {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 px-4">
-          <motion.div
+          <motion.a
             whileHover={{ scale: 1.05 }}
+            href="#home"
             className="text-2xl font-bold text-primary"
           >
             Meet Palan
-          </motion.div>
+          </motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

@@ -1,10 +1,46 @@
 "use client"
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Linkedin, Github, Instagram, Send, User, MessageSquare } from 'lucide-react'
 import { profileData } from '../data/profile'
 
 export default function Contact() {
   const { personal, references } = profileData
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState(null)
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (isSubmitting) return
+    setIsSubmitting(true)
+    setStatus(null)
+    try {
+      const response = await fetch('https://formspree.io/f/mldnzjqd', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      if (response.ok) {
+        setStatus({ ok: true, message: "Message sent! I'll get back to you within 24 hours." })
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setStatus({ ok: false, message: 'There was a problem sending your message. Please try again.' })
+      }
+    } catch (err) {
+      setStatus({ ok: false, message: 'There was a problem sending your message. Please try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <section id="contact" className="section-padding pb-0">
@@ -177,7 +213,8 @@ export default function Contact() {
                 <span>Send a Message</span>
               </h3>
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <input type="text" name="_gotcha" style={{ display: 'none' }} readOnly />
                 <div className="grid md:grid-cols-2 gap-3">
                   <motion.div
                     whileFocus={{ scale: 1.02 }}
@@ -186,8 +223,12 @@ export default function Contact() {
                     <label className="block text-text font-medium">Name</label>
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-secondary/30 rounded-lg focus:border-accent focus:outline-none transition-colors glass-effect"
                       placeholder="Your Name"
+                      required
                     />
                   </motion.div>
 
@@ -198,8 +239,12 @@ export default function Contact() {
                     <label className="block text-text font-medium">Email</label>
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-secondary/30 rounded-lg focus:border-accent focus:outline-none transition-colors glass-effect"
                       placeholder="your.email@example.com"
+                      required
                     />
                   </motion.div>
                 </div>
@@ -211,8 +256,12 @@ export default function Contact() {
                   <label className="block text-text font-medium">Subject</label>
                   <input
                     type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-secondary/30 rounded-lg focus:border-accent focus:outline-none transition-colors glass-effect"
                     placeholder="Subject"
+                    required
                   />
                 </motion.div>
 
@@ -223,19 +272,30 @@ export default function Contact() {
                   <label className="block text-text font-medium">Message</label>
                   <textarea
                     rows={4}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-secondary/30 rounded-lg focus:border-accent focus:outline-none transition-colors resize-none glass-effect"
                     placeholder="Your message..."
+                    required
                   ></textarea>
                 </motion.div>
+
+                {status && (
+                  <div className={`text-sm rounded-md px-3 py-2 ${status.ok ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'}`}>
+                    {status.message}
+                  </div>
+                )}
 
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-2.5 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:shadow-lg transition-shadow"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-primary to-accent text-white py-2.5 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:shadow-lg transition-shadow disabled:opacity-60"
                 >
                   <Send size={18} />
-                  <span>Send Message</span>
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                 </motion.button>
               </form>
             </div>
@@ -247,8 +307,8 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-center mt-8 pt-4 border-t border-secondary/30"
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="text-center mt-8 pt-3 border-t border-secondary/30"
         >
           <p className="text-text/60">
             © 2025 Meet Palan. All rights reserved.

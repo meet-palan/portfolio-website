@@ -75,17 +75,14 @@ export default function Hero() {
               transition={{ delay: 1, duration: 0.8 }}
               className="flex flex-wrap gap-4"
             >
-              <button className="btn-primary flex items-center space-x-2">
+              <a href={personal.resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center space-x-2">
                 <Download size={18} />
                 <span>Download Resume</span>
-              </button>
+              </a>
               <a href="#contact" className="btn-secondary">
                 Get In Touch
               </a>
             </motion.div>
-
-            {/* Social Links */}
-           
           </motion.div>
 
           {/* Profile Image with Glass Effect */}
@@ -101,19 +98,17 @@ export default function Hero() {
               className="relative"
             >
               <div className="profile-glass w-80 h-80 flex items-center justify-center animate-float">
-                {/* Placeholder for profile image */}
-                <div className="w-72 h-72 rounded-full bg-gradient-to-br from-accent/30 to-primary/30 flex items-center justify-center text-6xl font-bold text-primary/70">
-                  MP
-                </div>
-
-                {/* Replace the above div with this when you have your image */}
-                {/* <img 
-                  src={personal.profileImage} 
+                <img 
+                  src={personal.profileImage}
                   alt={personal.name}
                   className="w-72 h-72 rounded-full object-cover"
-                /> */}
+                />
               </div>
-
+              {/* Placeholder for profile image */}
+                  {/* <div className="w-72 h-72 rounded-full bg-gradient-to-br from-accent/30 to-primary/30 flex items-center justify-center text-6xl font-bold text-primary/70">
+                  MP
+                </div>*/}
+                
               {/* Floating elements */}
               <motion.div
                 animate={{ 
