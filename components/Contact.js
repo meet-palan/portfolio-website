@@ -57,7 +57,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4 sm:mb-6"></div>
           <p className="text-base sm:text-lg text-text/70 max-w-2xl mx-auto px-2 sm:px-0">
-            Ready to discuss opportunities or collaborate on projects? I'd love to hear from you.
+            Ready to discuss opportunities or collaborate on projects? I&apos;d love to hear from you.
           </p>
         </motion.div>
 

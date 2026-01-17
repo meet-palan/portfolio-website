@@ -1,12 +1,15 @@
 "use client"
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { motion, useTransform, useMotionValue } from 'framer-motion'
+import Image from 'next/image'
 import { Download, ChevronDown, Linkedin, Github, Mail, ArrowRight } from 'lucide-react'
 import { profileData } from '../data/profile'
 
+const ROLES = ["Business Analyst", "Product Manager", "AI Enthusiast"]
+
 export default function Hero() {
   const { personal } = profileData
-  const roles = ["Business Analyst", "Product Manager", "AI Enthusiast"]
+  const roles = useMemo(() => ROLES, [])
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayText, setDisplayText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
@@ -86,7 +89,7 @@ export default function Hero() {
           >
             <div className="space-y-3 lg:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-primary leading-tight">
-                Hi, I'm <br />
+                Hi, I&apos;m <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                   {personal.name}
                 </span>
@@ -112,7 +115,7 @@ export default function Hero() {
                 href="#contact"
                 className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white rounded-xl font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all flex items-center justify-center gap-2 group text-sm sm:text-base"
               >
-                Let's Talk
+                Let&apos;s Talk
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.a>
               
@@ -153,10 +156,12 @@ export default function Hero() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <img 
+                <Image 
                   src={personal.profileImage} 
                   alt={personal.name}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               </motion.div>
             </div>
