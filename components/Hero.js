@@ -77,8 +77,8 @@ export default function Hero() {
         <BackgroundShape key={`shape3-${mountKey}`} mouseX={mouseX} mouseY={mouseY} color="bg-secondary" size="w-48 h-48" top="70%" left="20%" depth={10} delay={2} />
       </div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 pt-20 lg:pt-0">
+      <div className="container-custom relative z-10">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12 pt-20 sm:pt-24 lg:pt-0">
           
           {/* Text Content */}
           <motion.div 
@@ -87,15 +87,15 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex-1 text-center lg:text-left space-y-6 lg:space-y-8 w-full"
           >
-            <div className="space-y-3 lg:space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-primary leading-tight">
+            <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold tracking-tight text-primary leading-tight break-words">
                 Hi, I&apos;m <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                   {personal.name}
                 </span>
               </h1>
 
-              <div className="h-10 sm:h-12 flex items-center justify-center lg:justify-start text-lg sm:text-xl md:text-2xl lg:text-3xl text-secondary font-light">
+              <div className="h-8 sm:h-10 md:h-12 flex items-center justify-center lg:justify-start text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-secondary font-light">
                 <span className="mr-2">I am a</span>
                 <span className="font-semibold text-primary relative">
                   {displayText}
@@ -104,7 +104,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <p className="text-base sm:text-lg text-secondary/80 max-w-xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
+            <p className="text-sm sm:text-base md:text-lg text-secondary/80 max-w-xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
               {personal.tagline}
             </p>
 
@@ -146,7 +146,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="flex-1 relative w-full lg:w-auto"
           >
-            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto">
+            <div className="relative w-48 h-48 xs:w-56 xs:h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto">
               {/* Glowing backdrop */}
               <div className="absolute inset-0 bg-gradient-to-tr from-accent to-primary rounded-full blur-[100px] opacity-40 animate-pulse-glow" />
               

@@ -19,11 +19,11 @@ export default function AllProjectsPage() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             All <span className="text-gradient">Projects</span>
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>

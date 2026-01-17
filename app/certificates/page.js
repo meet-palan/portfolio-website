@@ -17,7 +17,7 @@ export default function CertificatesPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
               All <span className="text-gradient">Certificates</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>

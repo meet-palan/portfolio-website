@@ -16,9 +16,9 @@ export default function Education() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text mb-4">
-            Education & <span className="text-gradient">Qualifications</span>
-          </h2>
+                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
+                   Education & <span className="text-gradient">Qualifications</span>
+                 </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
         </motion.div>
 
