@@ -5,7 +5,6 @@ export const profileData = {
     tagline: "Bridging business needs with innovative solutions",
     profileImage: "/Pic.jpg",
     resumeUrl: "https://drive.google.com/file/d/1GsOGTX7D8s3g_lEmOpBcuODJ50f2d_BW/view?usp=sharing",
-     //profileImage: "/profile-placeholder.jpg"
     linkedin: "https://www.linkedin.com/in/meetpalan2003/",
     github: "https://github.com/meet-palan",
     instagram: "https://www.instagram.com/meet_palann/",
@@ -30,9 +29,7 @@ export const profileData = {
       "Agile & Scrum Methodologies", 
       "JAVA",
       "Digital Marketing",
-      "Requirement Gathering",  
-      "JAVA",
-      
+      "Requirement Gathering"
     ],
     soft: [
       "Leadership",
@@ -49,9 +46,9 @@ export const profileData = {
     tools: [
       "Microsoft Office Suite",
       "Tableau",
-      "SQL Server",
       "WordPress",
-      "Figma"
+      "Figma",
+      "AI Tools"
     ]
   },
 
@@ -62,8 +59,8 @@ export const profileData = {
       year: "2025",
       description: "The Food Recipe App simplifies cooking with recipe discovery, meal planning, and a recipe selling marketplace, empowering users to cook, organize, and share with ease.",
       role: "Business Analyst & project manager",
-      tools: ["Figma", "Flutter","MS WORD and Powerpoint"],
-      image: "/1.jpg",
+      tools: ["Figma", "Flutter","Microsoft Word and Powerpoint","AI integration"],
+      image: "/food_recipe.png",
       githubUrl: "https://github.com/meet-palan",
       detailUrl: "#",
       impact: "Simplified cooking, saved time, and built a connected community of food enthusiasts.",
@@ -78,14 +75,14 @@ export const profileData = {
       year: "2024",
       description: "Developed a comprehensive BRD outlining essential features including categorization, visualization, and reminders for effective expense tracking. Created detailed Market Research Document with competitor and user analysis.",
       role: "Business Analyst",
-      tools: ["Microsoft Word"],
-      image: "/1.jpg",
+      tools: ["Microsoft Word","Flutter"],
+      image: "/Expense_Tracker.png",
       githubUrl: "https://github.com/meet-palan",
       detailUrl: "#",
-      impact: "Comprehensive requirements documentation for expense management solution",
-      problem: "Need for systematic expense tracking and budgeting solution",
-      approach: "Requirements gathering, competitor analysis, and user research",
-      solution: "Detailed BRD with feature specifications and market insights"
+      impact: "End-to-end delivery of expense management solution with development",
+      problem: "Lack of structured expense tracking and budgeting system",
+      approach: "Requirements gathering with user research and competitor analysis",
+      solution: "BRD creation and development of expense management application"
     },
     {
       id: 3, 
@@ -94,7 +91,7 @@ export const profileData = {
       description: "Developed interactive Tableau dashboard analyzing user preferences and viewing patterns to help Netflix enhance content recommendations and marketing strategies.",
       role: "Data Analyst",
       tools: ["Tableau"],
-      image: "/1.jpg",
+      image: "/netflix_das.png",
       githubUrl: "https://github.com/meet-palan",
       detailUrl: "#",
       impact: "Enhanced content recommendation insights through data visualization",
@@ -109,7 +106,7 @@ export const profileData = {
       description: "Developed a desktop application to streamline the movie ticket booking process with QR code-based authentication for secure entry and user verification.",
       role: "Software Developer",
       tools: ["JAVA Swing", "JDBC", "QR Code API"],
-      image: "/Pic.jpg",
+      image: "/booking_system.png",
       githubUrl: "https://github.com/meet-palan",
       detailUrl: "#",
       impact: "Streamlined booking process with secure QR authentication",
@@ -122,7 +119,7 @@ export const profileData = {
   experience: [
     {
       id: 1,
-      title: "Intern",
+      title: "Business Analyst & Project Coordinator",
       company: "Tibicle LLP",
       location: "Ahmedabad, Gujarat",
       duration: "April 2025 – Present",
@@ -136,7 +133,7 @@ export const profileData = {
     },
     {
       id: 2,
-      title: "Intern",
+      title: "Web Developer Intern",
       company: "Fuerte Developers", 
       location: "Rajkot, Gujarat",
       duration: "May 2023 – Jul 2023",
@@ -177,38 +174,105 @@ export const profileData = {
 
   certifications: [
     {
-      id: 1,
-      name: "Career Essentials in Business Analysis",
-      issuer: "Microsoft and LinkedIn",
-      date: "Jun 2024",
-      status: "completed",
-      description: "Gained expertise in business analysis, requirements gathering, and project management",
-      skills: ["Business Analysis", "Requirements Gathering", "Project Management"],
-      image: "/1.jpg",
-      url: "https://www.linkedin.com/learning/"
-    },
-    {
-      id: 2,
-      name: "Database Programming with SQL",
-      issuer: "Oracle Academy",
-      date: "Oct 2022", 
-      status: "completed",
-      description: "Developed a strong SQL skills for database management and data-driven decision-making",
-      skills: ["SQL", "Database Management", "Data Analysis"],
-      image: "/Pic.jpg",
-      url: "https://academy.oracle.com/"
-    },
-    {
-      id: 3,
-      name: "Fundamentals of Digital Marketing",
-      issuer: "Google Digital Garage",
-      date: "May 2022",
-      status: "completed", 
-      description: "Acquired foundational knowledge in digital marketing and online business growth strategies",
-      skills: ["Digital Marketing", "SEO", "Analytics", "Online Strategy"],
-      image: "/1.jpg",
-      url: "https://learndigital.withgoogle.com/digitalgarage"
-    }
+      "id": 1,
+        "name": "Career Essentials in Business Analysis",
+        "issuer": "Microsoft and LinkedIn",
+        "date": "Jun 2024",
+        "status": "completed",
+        "description": "Gained expertise in business analysis, requirements gathering, and project management.",
+        "skills": ["Business Analysis", "Requirements Gathering", "Project Management"],
+        "url": "https://drive.google.com/file/d/19TIjwgJb2kXxw5sLvVLc8d6ar8-lR4kO/view?usp=drive_link"
+      },
+      {
+        "id": 2,
+        "name": "Becoming a Product Manager: A Complete Guide",
+        "issuer": "LinkedIn Learning",
+        "date": "Sep 2025",
+        "status": "completed",
+        "description": "Explored the product lifecycle, market research, and the creation of product roadmaps endorsed by IIBA.",
+        "skills": ["Product Management", "Market Research", "Product Roadmap"],
+        "url": "https://drive.google.com/file/d/1cW2nQxv5gFPIbeQdfJjPLvEpsGZXviih/view?usp=drive_link"
+      },
+      {
+        "id": 3,
+        "name": "Google AI Essentials",
+        "issuer": "Google (via Coursera)",
+        "date": "Jun 2025",
+        "status": "completed",
+        "description": "Learned foundational AI concepts including prompt engineering, responsible AI use, and boosting productivity with AI tools.",
+        "skills": ["Artificial Intelligence", "Prompt Engineering", "Generative AI"],
+        "url": "https://drive.google.com/file/d/1JX_UnmvuRvEJIOAE2QKcfMiH0gyYPJrY/view?usp=drive_link"
+      },
+      {
+        "id": 4,
+        "name": "Fundamentals of Digital Marketing",
+        "issuer": "Google Digital Garage",
+        "date": "Jun 2022",
+        "status": "completed",
+        "description": "Acquired foundational knowledge in digital marketing and online business growth strategies.",
+        "skills": ["Digital Marketing", "SEO", "Analytics", "Online Strategy"],
+        "url": "https://drive.google.com/file/d/1zTrQbhcrUT0VoPfadHMhWci1BLqrkZsp/view?usp=drive_link"
+      },
+      {
+        "id": 5,
+        "name": "The Complete Tableau Bootcamp for Aspiring Data Scientists",
+        "issuer": "Infosys Springboard",
+        "date": "Mar 2024",
+        "status": "completed",
+        "description": "Mastered data visualization, dashboard creation, and data storytelling using Tableau.",
+        "skills": ["Data Visualization", "Tableau", "Data Analytics"],
+        "url": "https://drive.google.com/file/d/1hWj9Eo1LExc4SaJER5E-o1gOPbSSssvc/view?usp=drive_link"
+      },
+      {
+        "id": 6,
+        "name": "TCS iON Career Edge - Young Professional",
+        "issuer": "TCS iON",
+        "date": "Jul 2023",
+        "status": "completed",
+        "description": "Developed essential soft skills, professional etiquette, and foundational knowledge in IT and AI.",
+        "skills": ["Communication", "Business Etiquette", "Soft Skills", "Resume Writing"],
+        "url": "https://drive.google.com/file/d/1XsiKrHuHxIqvmD_U4tM2lF30U4xq65_D/view?usp=drive_link"
+      },
+      {
+        "id": 7,
+        "name": "Database Programming with SQL",
+        "issuer": "Oracle Academy",
+        "date": "Oct 2022",
+        "status": "completed",
+        "description": "Developed strong SQL skills for database management and data-driven decision-making.",
+        "skills": ["SQL", "Database Management", "Relational Databases"],
+        "url": "https://drive.google.com/file/d/1heIvoLbcnGCgbhw_8CA2QCOVqbD76Ym-/view?usp=drive_link"
+      },
+      {
+        "id": 8,
+        "name": "Digital Skills: Digital Marketing",
+        "issuer": "Accenture",
+        "date": "Apr 2024",
+        "status": "completed",
+        "description": "Explored digital marketing strategies, including display advertising, PPC, and SEO techniques.",
+        "skills": ["Digital Marketing", "SEO", "PPC", "Marketing Strategy"],
+        "url": "https://drive.google.com/file/d/1o45tjIvrpoZXKQXDRsp9dGozLco1Q1UL/view?usp=drive_link"
+      },
+      {
+        "id": 9,
+        "name": "Rank Your Blog Website in Google: SEO For Beginners",
+        "issuer": "Udemy",
+        "date": "Nov 2023",
+        "status": "completed",
+        "description": "Learned practical SEO strategies to improve search engine rankings for blog content.",
+        "skills": ["SEO", "Content Marketing", "Google Search Console"],
+        "url": "https://drive.google.com/file/d/1Eum1EREfP5bL9MB26DoAV5k3WnUUfTm_/view?usp=drive_link"
+      },
+      {
+        "id": 10,
+        "name": "Project Management",
+        "issuer": "Great Learning Academy",
+        "date": "Jun 2023",
+        "status": "completed",
+        "description": "Learned fundamental project management methodologies and lifecycle stages.",
+        "skills": ["Project Management", "Agile", "Resource Planning"],
+        "url": "https://drive.google.com/file/d/1_xe8VecCrnkqXBpPJR_kEej9eoYfKj18/view?usp=drive_link"
+      }
   ],
   
   interests: [
@@ -220,7 +284,5 @@ export const profileData = {
     "Case Studies",
     "Data Analysis",
     "Technology Trends"
-  ],
-
-  
+  ]
 }

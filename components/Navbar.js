@@ -1,12 +1,11 @@
 "use client"
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, Sun, Moon } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,18 +14,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    const isDark = saved === 'dark'
-    setDarkMode(isDark)
-  }, [])
-
-  const toggleTheme = () => {
-    const next = !darkMode
-    setDarkMode(next)
-    localStorage.setItem('theme', next ? 'dark' : 'light')
-  }
 
   const navItems = [
     
@@ -51,7 +38,7 @@ export default function Navbar() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             href="#home"
-            className="text-2xl font-bold text-primary"
+            className="text-xl sm:text-2xl font-bold text-primary"
           >
             Meet Palan
           </motion.a>
@@ -69,24 +56,10 @@ export default function Navbar() {
                 {item.name}
               </motion.a>
             ))}
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle dark mode"
-              className="w-9 h-9 rounded-full bg-accent text-white flex items-center justify-center hover:bg-primary transition-colors"
-            >
-              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-3">
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle dark mode"
-              className="w-9 h-9 rounded-full bg-accent text-white flex items-center justify-center hover:bg-primary transition-colors"
-            >
-              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-text hover:text-accent"

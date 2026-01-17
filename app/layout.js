@@ -4,8 +4,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Meet Palan - Portfolio',
-  description: 'Professional portfolio of Meet Palan - Aspiring Business Analyst specializing in process optimization and data-driven growth.',
+  title: 'Meet Palan | Business Analyst & Aspiring Product Manager',
+  description: 'Business Analyst & Aspiring Product Manager portfolio with SQL, Tableau, Agile projects, stakeholder collaboration, certifications, and real-world experience.',
 }
 
 export default function RootLayout({ children }) {
@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className} suppressHydrationWarning>{children}</body>
     </html>
